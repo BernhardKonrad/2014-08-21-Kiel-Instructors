@@ -57,13 +57,13 @@ chl_raw FLOAT8)
 
 
 
-Data = open(sys.argv[1], 'r')
+Data = open(sys.argv[2], 'r')
 
-DataFileName = "'" + sys.argv[1] + "'"
+DataFileName = "'" + sys.argv[2] + "'"
 
 print DataFileName
 
-CTD_filename = "'" + sys.argv[1].split('.')[0] + "'"
+CTD_filename = "'" + sys.argv[2].split('.')[0] + "'"
 
 print CTD_filename
 
