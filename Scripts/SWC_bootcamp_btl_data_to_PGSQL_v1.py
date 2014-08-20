@@ -85,16 +85,17 @@ LineNumber = 1
 
 for Line in Data_msm22:     
     if LineNumber > 13:
-        Line = Line.strip('\r\n')
-        DL = Line.split("\t")
-        DL = [re.sub("NaN", "NULL", str(x)) for x in DL]
+        Line = Line.strip('\r\n') 
+        # eventuell hier ein Line.replace("NaN", "NULL")
+        DL = Line.split("\t") 
+        DL = [re.sub("NaN", "NULL", str(x)) for x in DL]  # ersetzt durch Line.replace()
         date = "'" + DL[1] + "'"
         profile = DL[2]
         ctd_filename = "'" + "msm_022_1_" + str(profile).zfill(3) + "'"
         lat = DL[3]
         lon = DL[4]
         niskin = DL[5]
-        indx = "'" + re.sub("'","",ctd_filename) + "_" + str(niskin).zfill(2) + "'"
+        indx = "'" + re.sub("'","",ctd_filename) + "_" + str(niskin).zfill(2) + "'"  # eventuell wieder string.replace()
         btl_depth = DL[7]
         Chla = DL[16]
         Chla_flag = DL[17]
@@ -105,7 +106,7 @@ for Line in Data_msm22:
         POP = DL[20]
         POP_flag = DL[21]
         cur.execute("""INSERT INTO btl_data(Indx, CTD_filename, Cruise, Profile_ID, Date, PositionLat_dec, PositionLon_dec, Niskin_no, Depth, POC, POC_flag, PON, PON_flag, POP, POP_flag, Chla, Chla_flag) 
-                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)""" %(indx, ctd_filename, cruise, profile, date, lat, lon, niskin, btl_depth, POC, POC_flag, PON, PON_flag, POP, POP_flag, Chla, Chla_flag))
+                    VALUES (" + str(indx) + ", %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)""" %(ctd_filename, cruise, profile, date, lat, lon, niskin, btl_depth, POC, POC_flag, PON, PON_flag, POP, POP_flag, Chla, Chla_flag))  # not sure if this line works
 
     LineNumber += 1
 

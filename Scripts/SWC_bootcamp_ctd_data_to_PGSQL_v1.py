@@ -15,7 +15,7 @@ This script reads in asci_ctd data and feeds it into a PostGreSQL database.
 
 import re
 import sys
-import numpy as np
+import numpy as np  # not required here
 import psycopg2 as pgsql
 
 
@@ -118,7 +118,7 @@ for Line in Data:
         Line = Line.strip('\r\n')
         DataList = Line.split()
         #print DataList
-        pressure = re.sub("-9.99.*","NULL", DataList[1])
+        pressure = re.sub("-9.99.*","NULL", DataList[1])   # if DataList[1].startswith("-9.99"): pressure = "NULL"
         depth = re.sub("-9.99.*","NULL", DataList[2])
         temp = re.sub("-9.99.*","NULL", DataList[3])
         sal = re.sub("-9.99.*","NULL", DataList[4])
