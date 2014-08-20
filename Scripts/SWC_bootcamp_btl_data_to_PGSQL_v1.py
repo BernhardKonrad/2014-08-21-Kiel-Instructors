@@ -76,7 +76,7 @@ Chla_flag INT
 
 
 
-Data_msm22 = open("/Users/rkiko/git/Data/msm22_btl_nuts_POM_chla.txt", "r")
+Data_msm22 = open("/Users/rkiko/git/2014-08-21-Kiel-Instructors/Data/msm22_btl_nuts_POM_chla.txt", "r")
 cruise = "'" + "msm022" + "'"
 
 LineNumber = 1
@@ -106,7 +106,7 @@ for Line in Data_msm22:
         POP = DL[20]
         POP_flag = DL[21]
         cur.execute("""INSERT INTO btl_data(Indx, CTD_filename, Cruise, Profile_ID, Date, PositionLat_dec, PositionLon_dec, Niskin_no, Depth, POC, POC_flag, PON, PON_flag, POP, POP_flag, Chla, Chla_flag) 
-                    VALUES (" + str(indx) + ", %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)""" %(ctd_filename, cruise, profile, date, lat, lon, niskin, btl_depth, POC, POC_flag, PON, PON_flag, POP, POP_flag, Chla, Chla_flag))  # not sure if this line works
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)""" %(indx, ctd_filename, cruise, profile, date, lat, lon, niskin, btl_depth, POC, POC_flag, PON, PON_flag, POP, POP_flag, Chla, Chla_flag))  # not sure if this line works
 
     LineNumber += 1
 
