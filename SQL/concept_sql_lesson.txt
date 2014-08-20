@@ -4,6 +4,29 @@ a1) getting a database running
 
 
 
+# to create a new user type:
+
+CREATE ROLE username PASSWORD 'password' LOGIN; (password needs to be in '')
+
+## LOGIN is needed to enable login, this is not default
+
+
+# to create a database "test" with the owner "username"
+# this only works when logged in over the sql shell as postgres / into the postgres 
+
+CREATE DATABASE test WITH OWNER = username 
+
+!!!in case that an error occured, one needs to run rollback(), or over pyscopg2   mydb.rollback()
+
+
+
+
+--- to change between databases:
+
+\connect "database"
+
+
+
 read in survey.db
 
 
