@@ -1,0 +1,169 @@
+CTD Calibration Results
+
+  Cruise ID short : msm_022_1
+  Cruise ID long  : Maria S. Merian 22/1
+  Expocode        : 06MM20121024
+
+  Cal Date-Time   : 16-Jul-2014 17:15:18
+  Cal Software    : 0.27
+  CTD-SVN         : 52
+  Cal Release     : 3
+
+
+Sensor summary :
+
+
+CTD systems used :
+
+  CTD-Setup # : 1
+    Pressure S/N : 82991
+    Used in profiles [first:last] : [1:80,82:115]
+
+    P calibration or check date  : 2010/8/17
+    Deck offset applied to data  :
+                        p_offset : 1.180000
+
+
+
+Primary systems used:
+
+  Pri-Setup # : 1
+    Used in profiles [first:last] : [1:8]
+    Pressure S/N                  : 82991
+    Temperature S/N               : 4835
+    Conductivity S/N              : 2452
+    Oxygen S/N                    : 1718
+    Chlorophyll S/N               : 0
+    Turbidity S/N                 : 0
+
+    GEOMAR T lab calibration      : 0
+                             date : 2007/7/19
+
+    C down calibration string : -0.0036198-9.8582e-08*p-0.00014601*t+0.00141*c-1.5779e-05*tim
+                       misfit : 0.00051864 PSU
+    O down calibration string : -245.2001+0.27567*p-4.6501e-05*p.*p+14.5812*t-0.73342*o
+                       misfit : 8.0088 mumol/kg
+
+    C  up  calibration string : -0.0031753-7.7086e-08*p-0.00013348*t+0.0012389*c-1.5069e-05*tim
+                       misfit : 0.00044023 PSU
+    O  up  calibration string : 4.815+0.00080927*p+4.5353e-07*p.*p-0.16862*t+0.15606*o
+                       misfit : 3.0838 mumol/kg
+
+    C calibration parameters    : remove worst 33% of data
+    O calibration parameters    : remove worst 33% of data
+
+   Oxygen hysteresis correction : off
+
+  Pri-Setup # : 2
+    Used in profiles [first:last] : [9:80,82:115]
+    Pressure S/N                  : 82991
+    Temperature S/N               : 4835
+    Conductivity S/N              : 2452
+    Oxygen S/N                    : 631
+    Chlorophyll S/N               : 0
+    Turbidity S/N                 : 0
+
+    GEOMAR T lab calibration      : 0
+                             date : 2007/7/19
+
+    C down calibration string : -0.0036198-9.8582e-08*p-0.00014601*t+0.00141*c-1.5779e-05*tim
+                       misfit : 0.0012659 PSU
+    O down calibration string : -4.6126+0.0066541*p-5.5172e-07*p.*p+0.33456*t+0.062677*o
+                       misfit : 0.79169 mumol/kg
+
+    C  up  calibration string : -0.0031753-7.7086e-08*p-0.00013348*t+0.0012389*c-1.5069e-05*tim
+                       misfit : 0.0010897 PSU
+    O  up  calibration string : -5.1581+0.0073946*p-6.7198e-07*p.*p+0.37231*t+0.060174*o
+                       misfit : 0.7969 mumol/kg
+
+    C calibration parameters    : remove worst 33% of data
+    O calibration parameters    : remove worst 33% of data
+
+   Oxygen hysteresis correction : off
+
+
+Secondary systems used:
+
+  Sec-Setup # : 1
+    Used in profiles [first:last] : [1:48,50:56]
+    Pressure S/N                  : 82991
+    Temperature S/N               : 4867
+    Conductivity S/N              : 3300
+    Oxygen S/N                    : 992
+    Chlorophyll S/N               : 0
+    Turbidity S/N                 : 0
+
+    GEOMAR T lab calibration      : 0
+                             date : 2007/8/1
+
+    C down calibration string : -0.007965-2.157e-07*p-0.00030022*t+0.0028421*c
+                       misfit : 0.0020378 PSU
+    O down calibration string : 0.38805-0.0023156*p+4.2285e-07*p.*p+0.021848*t+0.068065*o
+                       misfit : 0.56562 mumol/kg
+
+    C  up  calibration string : -0.0055541-1.1967e-07*p-0.00018699*t+0.0018991*c
+                       misfit : 0.0018223 PSU
+    O  up  calibration string : -3.9632+0.0060818*p-8.4259e-07*p.*p+0.43447*t+0.031304*o
+                       misfit : 0.46402 mumol/kg
+
+    C calibration parameters    : remove worst 33% of data
+    O calibration parameters    : remove worst 33% of data
+
+   Oxygen hysteresis correction : off
+
+  Sec-Setup # : 2
+    Used in profiles [first:last] : [49,57:80,82:115]
+    Pressure S/N                  : 82991
+    Temperature S/N               : 4867
+    Conductivity S/N              : 3300
+    Oxygen S/N                    : 1287
+    Chlorophyll S/N               : 0
+    Turbidity S/N                 : 0
+
+    GEOMAR T lab calibration      : 0
+                             date : 2007/8/1
+
+    C down calibration string : -0.0068696-1.1121e-07*p-0.0002969*t+0.0022918*c
+                       misfit : 0.0018141 PSU
+    O down calibration string : -3.7018+0.0061935*p-5.9326e-07*p.*p+0.25269*t+0.057514*o
+                       misfit : 0.77873 mumol/kg
+
+    C  up  calibration string : -0.0053534+1.9358e-08*p-0.00016811*t+0.001579*c
+                       misfit : 0.0016203 PSU
+    O  up  calibration string : -4.4787+0.0069131*p-7.2602e-07*p.*p+0.28022*t+0.056315*o
+                       misfit : 0.79477 mumol/kg
+
+    C calibration parameters    : remove worst 33% of data
+    O calibration parameters    : remove worst 33% of data
+
+   Oxygen hysteresis correction : off
+
+
+Sensor strings used to create final calibrated data :
+  Setting # : 1
+    Profiles [first:last] : [1:41]
+    Temperature           : Primary
+    Conductivity          : Primary
+    Oxygen                : Secondary
+
+  Setting # : 2
+    Profiles [first:last] : [9:115]
+    Temperature           : Primary
+    Conductivity          : Primary
+    Oxygen                : Primary
+
+
+
+Calibrations were forced :
+  C primary up calibration string : -0.0031753-7.7086e-08*p-0.00013348*t+0.0012389*c-1.5069e-05*tim
+  C primary down calibration string : -0.0036198-9.8582e-08*p-0.00014601*t+0.00141*c-1.5779e-05*tim
+  C primary up calibration string : -0.0031753-7.7086e-08*p-0.00013348*t+0.0012389*c-1.5069e-05*tim
+  C primary down calibration string : -0.0036198-9.8582e-08*p-0.00014601*t+0.00141*c-1.5779e-05*tim
+
+
+Bottle up- to down-cast :
+              Method : same potential temperature within 30dbar (WOCE style) 
+  Sensor string used : 2 
+
+
+Loop edit velocity   : 0.01 m/s 

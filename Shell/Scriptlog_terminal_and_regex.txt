@@ -1,0 +1,47 @@
+#Scriptlog
+
+#Merge data from several files into one file
+#Reorganise the data for input in R
+#Calculate mean values for different conditions
+#Create a figure
+
+
+#files to work on:
+
+A20100012010031_chla.txt	Labbook_EnvData.txt
+A20100322010059_chla.txt	Scriptlog_Stralsund.txt
+A20100602010090_chla.txt	data.txt
+A20100912010120_chla.txt	data1.txt
+A20101212010151_chla.txt	got_stuck
+
+#command to concatenate the files
+
+
+RAINER-MAC:Stralsund_0 rkiko$ cat A*.txt | grep -v "lat" > data.txt
+
+
+#change format by using reg expressions
+
+#command:
+.*A(20\d\d)(\d{3})(\d{4})(\d{3}).*\t.*\t.*\t(.*)
+
+Chla\t\1\t\3\t\2\t\4\t\5
+
+#adding header
+
+variable	year_a	year_b	first_day	last_day	value
+
+#saving as data1.txt
+
+#reading into R
+
+dat = read.table(file = "data1.txt", header = TRUE, sep = "\t", na.strings=NA)
+
+midday_C = (dat$first_day+dat$last_day)/2
+
+dat = cbind(dat, midday_C)
+
+mean_chla_2010 = aggregate(value~midday_C, dat, mean)
+
+plot(mean_chla_2010$midday_C, mean_chla_2010$value)
+

@@ -1,0 +1,110 @@
+SQL
+
+a1) getting a database running
+
+
+
+read in survey.db
+
+
+
+a2) get information about your database
+
+\d
+
+\dt
+
+\dv
+
+\d table_name
+
+
+
+a3) select data from a table
+
+commands: DISTINCT, * , COUNT, ORDER BY, WHERE = , WHERE a LIKE b, WHERE a SIMILAR TO b, WHERE a ~ b, WHERE a BETWEEN b AND c
+
+
+a4) aggregate data from a table
+
+commands: GROUP BY together with AVG, using "AS", need to define group by close for every value
+aggregate data from two tables
+
+
+999) - Interlude: OK so, SQL is cool, but why not excel???
+
+
+commands: LEFT JOIN, LEFT JOIN LATERAL
+
+
+a5) inserting data into a database:
+
+using primary key
+
+
+
+- now: change to python (because data might change, so you need to reload)
+  but keep pgsql open
+
+
+b1) connect via python
+
+import psycopg2 as pgsql
+import pandas.io.sql as sql ### need pandas for this to work ###
+
+mydb = pgsql.connect(database="survey", user="rkiko", password="rkiko")
+mydb.close()
+
+
+sqlite would not ask for password or user!!!
+
+
+(((### show that the connection works, but get back to reading out data later
+
+df  = sql.read_sql("""select * from persons""",mydb)
+
+print df)))
+
+
+
+b2) Initial cursor and define tables
+
+cur = mydb.cursor()
+
+cur.close()
+
+#cur.execute("""DROP TABLE IF EXISTS ctd_data""")
+
+cur.execute("""CREATE TABLE IF NOT EXISTS ctd_data
+(Indx TEXT PRIMARY KEY,
+Station_ID TEXT,
+cpar FLOAT8)
+""")
+
+
+data types
+
+
+b3) read in data
+
+INSERT INTO ...
+
+mydb.commit()
+
+
+##inserting new data
+
+b4) updating data
+
+##updating with SET a WHERE b = c
+
+b5) deleting and dropping
+
+delete from where
+
+drop table
+
+b6) reading out data and plotting (my standard procedure)
+
+b7) saving data as txt file
+

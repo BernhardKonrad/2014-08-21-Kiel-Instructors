@@ -1,0 +1,50 @@
+Python day 1
+
+ways to run it
+
+modules (installed modules?)
+
+get help?
+
+it can do math
+
+variables
+
+datatypes
+
+ipynb and python scripts
+
+for-loop
+
+if
+
+print
+
+lists
+
+dictionaries
+
+indexing
+
+#reading in files
+
+io
+
+sys.argv
+
+split
+strip
+re.sub and others...
+
+
+string formating
+
+#writing files (very short, we put stuff into sql...)
+
+
+
+
+
+
+
+
